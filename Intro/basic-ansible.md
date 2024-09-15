@@ -1,4 +1,4 @@
-What is Ansible ?
+# What is Ansible ?
 
 Ansible is an open source, command-line IT automation software application written in Python, that automates
 
@@ -11,7 +11,7 @@ Ansible is an open source, command-line IT automation software application writt
   and many other processes.
 
 
-How Ansible works ?
+# How Ansible works ?
 
 * Ansible is agentless in nature, which means you don't need to install any software on the manage nodes.
   
