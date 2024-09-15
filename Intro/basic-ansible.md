@@ -12,7 +12,10 @@ Ansible is an open source, command-line IT automation software application writt
 
 
 How Ansible works ?
+
 * Ansible is agentless in nature, which means you don't need to install any software on the manage nodes.
+  
 * Ansible operates in a client-server architecture, where the control node (master machine) manages the managed nodes (client machines or servers).
-   ->  Control Node: The machine where Ansible is installed and from which you execute the commands.
-   ->  Managed Nodes: These are the remote systems (servers, switches, cloud resources) that Ansible manages. They don't require any agent, just SSH access or Windows Remote Management (WinRM) for Windows.
+  
+   * Control Node: The machine where Ansible is installed and from which you execute the commands.
+   *  Managed Nodes: These are the remote systems (servers, switches, cloud resources) that Ansible manages. They don't require any agent, just SSH access or Windows Remote Management (WinRM) for Windows.
