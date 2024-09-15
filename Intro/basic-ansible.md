@@ -1,9 +1,13 @@
 What is Ansible ?
 
 Ansible is an open source, command-line IT automation software application written in Python, that automates
--> provisioning :  Automatically creating cloud resources like EC2 instances, databases, load balancers, and networks in environments like AWS, Azure, or Google Cloud.
--> configuration management : For example, setting up users, services, or installing software packages across servers.
--> application deployment : Automate deploying and updating applications on multiple servers.
+
+* provisioning :  Automatically creating cloud resources like EC2 instances, databases, load balancers, and networks in environments like AWS, Azure, or Google Cloud.
+
+* configuration management : For example, setting up users, services, or installing software packages across servers.
+
+* application deployment : Automate deploying and updating applications on multiple servers.
+
   and many other processes.
 
 
