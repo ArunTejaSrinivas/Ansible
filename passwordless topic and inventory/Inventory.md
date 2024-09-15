@@ -6,7 +6,7 @@ A static inventory file is typically a plain text file (usually named hosts or i
 
 ## INI Format
 ```
-inventory file: hosts
+#inventory file: hosts
 
 [webservers]
 web1.example.com
@@ -23,7 +23,7 @@ ansible_ssh_private_key_file=/path/to/key
 
 ## YAML
 ```
-inventory file: hosts.yaml
+#inventory file: hosts.yaml
 
 all:
   vars:
