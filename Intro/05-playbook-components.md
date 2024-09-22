@@ -5,35 +5,29 @@ A Playbook is a YAML file that defines a series of actions to be executed on man
 Example
 ---
 ```
-- name: Update web servers
-  hosts: webservers
-  remote_user: root
-
+- name: Setup all the required packages/softwares to run an Angular application
+  hosts: my_instances
+  become/remote_user: true
   tasks:
-  - name: Ensure apache is at the latest version
-    ansible.builtin.yum:
-      name: httpd
-      state: latest
+    - name: Update APT package index
+      ansible.builtin.apt:
+        update_cache: yes
 
-  - name: Write the apache config file
-    ansible.builtin.template:
-      src: /srv/httpd.j2
-      dest: /etc/httpd.conf
+    - name: Install nodejs
+      ansible.builtin.apt:
+        name: nodejs
+        state: present
 
-- name: Update db servers
-  hosts: databases
-  remote_user: root
+    - name: Install npm
+      ansible.builtin.apt:
+        name: npm
+        state: present
 
-  tasks:
-  - name: Ensure postgresql is at the latest version
-    ansible.builtin.yum:
-      name: postgresql
-      state: latest
-
-  - name: Ensure that postgresql is started
-    ansible.builtin.service:
-      name: postgresql
-      state: started
+    - name: Install Angular CLI
+      ansible.builtin.npm:
+        name: '@angular/cli'
+        global: yes
+        state: present
 ```
 ## Play
 A Play is a single, complete execution unit within a playbook. It specifies which hosts to target and what tasks to execute on those hosts. Plays are used to group related tasks and execute them in a specific order.
