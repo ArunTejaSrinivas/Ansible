@@ -6,34 +6,34 @@ Roles help to encapsulate and modularize the logic and configuration needed to m
 This modular approach promotes reusability, maintainability, and consistency across different playbooks and environments.
 
 ## Key Components of an Ansible Role
-# Tasks
+### Tasks
 The main list of actions that the role performs.
 
-# Handlers
+### Handlers
 Tasks that are triggered by changes in other tasks, typically used for actions like restarting services.
 
-# Files
+### Files
 Static files that need to be transferred to managed hosts.
 
-# Templates
+### Templates
 Jinja2 templates that can be rendered and transferred to managed hosts.
 
-# Vars
+### Vars
 Variables that are used within the role.
 
-# Defaults
+### Defaults
 Default variables for the role, which can be overridden.
 
-# Meta
+### Meta
 Metadata about the role, including dependencies on other roles.
 
-# Library
+### Library
 Custom modules or plugins used within the role.
 
-# Module_defaults
+### Module_defaults
 Default module parameters for the role.
 
-# Lookup_plugins
+### Lookup_plugins
 Custom lookup plugins for the role.
 
 ##  Directory Structure of an Ansible Role
@@ -54,17 +54,17 @@ An Ansible role follows a specific directory structure:
       └── main.yml
 ```
 ## Why Use Ansible Roles?
-# Modularity
+### Modularity
 Roles allow you to break down complex playbooks into smaller, reusable components. Each role handles a specific part of the configuration or setup.
 
-# Reusability
+### Reusability
 Once created, roles can be reused across different playbooks and projects. This saves time and effort in writing redundant code.
 
-# Maintainability
+### Maintainability
 By organizing related tasks into roles, it becomes easier to manage and maintain the code. Changes can be made in one place and applied consistently wherever the role is used.
 
-# Readability
+### Readability
 Roles make playbooks cleaner and easier to read by abstracting away the details into logically named roles.
 
-# Collaboration/sharing
+### Collaboration/sharing
 Roles facilitate collaboration among team members by allowing them to work on different parts of the infrastructure independently.
