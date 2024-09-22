@@ -4,6 +4,7 @@ A Playbook is a YAML file that defines a series of actions to be executed on man
 
 Example
 ---
+```
 - name: Update web servers
   hosts: webservers
   remote_user: root
@@ -33,6 +34,7 @@ Example
     ansible.builtin.service:
       name: postgresql
       state: started
+```
 ## Play
 A Play is a single, complete execution unit within a playbook. It specifies which hosts to target and what tasks to execute on those hosts. Plays are used to group related tasks and execute them in a specific order.
 ```
