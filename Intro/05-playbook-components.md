@@ -5,6 +5,7 @@ A Playbook is a YAML file that defines a series of actions to be executed on man
 Example
 ---
 ```
+---
 - name: Setup all the required packages/softwares to run an Angular application
   hosts: my_instances
   become/remote_user: true/root
