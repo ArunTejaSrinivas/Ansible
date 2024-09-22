@@ -2,8 +2,8 @@
 ## Task 1
 Create three(3) EC2 instances on AWS using Ansible loops
 
-2 Instances with Ubuntu Distribution
-1 Instance with Centos Distribution
+* 2 Instances with Ubuntu Distribution
+* 1 Instance with Centos Distribution
 Hint: Use connection: local on Ansible Control node.
 
 ## Task 2
