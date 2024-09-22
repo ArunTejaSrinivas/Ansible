@@ -33,33 +33,34 @@ Example
 ## Play
 A Play is a single, complete execution unit within a playbook. It specifies which hosts to target and what tasks to execute on those hosts. Plays are used to group related tasks and execute them in a specific order.
 ```
-- name: Install and configure Nginx
-  hosts: webservers
+- name: Setup all the required packages/softwares to run an Angular application
+  hosts: my_instances
+  become/remote_user: true/root
   tasks:
-    - name: Install Nginx
-      apt:
-        name: nginx
+    - name: Install nodejs
+      ansible.builtin.apt:
+        name: nodejs
         state: present
 ```
 ## Modules
 Modules are the building blocks of Ansible tasks. They are small programs that perform a specific action on a managed node, such as installing a package, copying a file, or managing services. 
 Example The apt module used in a task to install a package:
 ```
-- name: Install Nginx
-  apt:
-    name: nginx
+- name: Install nodejs
+  `ansible.builtin.apt:`
+    name: nodejs
     state: present
 ```
 ## Tasks
 Tasks are individual actions within a play that use modules to perform operations on managed nodes. Each task is executed in order and can include conditionals, loops, and handlers.
 ```
-- name: Install Nginx
-  apt:
-    name: nginx
+- name: Install nodejs
+  ansible.builtin.apt:
+    name: nodejs
     state: present
 
-- name: Start Nginx service
-  service:
-    name: nginx
-    state: started
+- name: Install npm
+  ansible.builtin.apt:
+    name: npm
+    state: present
 ```
