@@ -1,9 +1,10 @@
-# How to setup Passwordless Authentication
+# How to setup Passwordless Authentication 
 
 ## EC2 Instances
 
 ### Using Public Key
 
+## when you are in local
 ```
 ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
 ```
@@ -18,3 +19,8 @@ ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
 - Go to the file `/etc/ssh/sshd_config.d/60-cloudimg-settings.conf`
 - Update `PasswordAuthentication yes`
 - Restart SSH -> `sudo systemctl restart ssh`
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## If you are using WSL or EC2 Instance 
+* run the commange in control node`ssh-keygen` to get public and praivate keys if you are using wsl or ec2 instance we can take public key and we have to add that into manage node exactly in authorization_keys where we can find this means we have run the command called ssh-keygen in manage node too..
+
