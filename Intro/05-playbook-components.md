@@ -7,7 +7,7 @@ Example
 ```
 - name: Setup all the required packages/softwares to run an Angular application
   hosts: my_instances
-  become/remote_user: true
+  become/remote_user: true/root
   tasks:
     - name: Update APT package index
       ansible.builtin.apt:
