@@ -22,5 +22,5 @@ ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## If you are using WSL or EC2 Instance 
-* run the commange in control node`ssh-keygen` to get public and praivate keys if you are using wsl or ec2 instance we can take public key and we have to add that into manage node exactly in authorization_keys where we can find this means we have run the command called ssh-keygen in manage node too..
+* run the commange in control node `ssh-keygen` to get public and praivate keys if you are using wsl or ec2 instance we can take public key and we have to add that into manage node exactly in `authorization_keys` where we can find this means we have run the command called ssh-keygen in manage node too..
 
